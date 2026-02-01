@@ -1,0 +1,16 @@
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    exec start-hyprland
+fi
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+alias zshconf='nvim .zshrc'
+alias hyprconf='nvim .config/hypr/hyprland.conf'
+alias set-wallpaper='userscripts/set-wallpaper.sh'
+alias ff='fastfetch'
+alias shutdown='shutdown now'
+alias reboot='sudo reboot now'
+alias pkg='comm -23 <(pacman -Slq | sort) <(pacman -Qq | sort) | fzf --preview 'pacman -Si {}''
+alias yaypkg='comm -23 <(yay -Ss | sort) <(pacman -Qq | sort) | fzf --preview 'pacman -Ss ''
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
