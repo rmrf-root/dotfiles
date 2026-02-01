@@ -2,8 +2,10 @@ if [ -z "$WAYLAND_DISPLAY" ]; then
     exec start-hyprland
 fi
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+PS1=' %F{cyan}%~ %(!.%F{red}❯.%F{green}❯)%f '
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 alias zshconf='nvim .zshrc'
 alias hyprconf='nvim .config/hypr/hyprland.conf'
