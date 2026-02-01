@@ -8,9 +8,9 @@ wallust ungoogled-chromium-bin
 ## Auto Login
 sudo systemctl edit getty@tty1
 ### Put this inside
-[Service]
-ExecStart=
-ExecStart=-/sbin/agetty --autologin user --noclear %I $TERM
+[Service]  
+ExecStart=  
+ExecStart=-/sbin/agetty --autologin user --noclear %I $TERM  
 ## OpenSSH Config
 ssh-keygen -t ed25519 -C "your_email@example.com"  
 eval "$(ssh-agent -s)"  
