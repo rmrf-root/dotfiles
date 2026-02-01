@@ -1,6 +1,6 @@
 # Packages
 ## Official
-zsh zsh-autosuggestions zsh-autocomplete wiremix waybar ttf-jetbrains-mono swww stow slurp rofi openshh nnn nerd-fonts neovim impala grim git btop bluetui
+zsh zsh-autocomplete wiremix waybar ttf-jetbrains-mono swww stow slurp rofi openshh nnn nerd-fonts neovim impala grim git btop bluetui
 ## AUR
 wallust ungoogled-chromium-bin
 
