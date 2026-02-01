@@ -34,7 +34,7 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 typeset -gA ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[command]=fg=5
+ZSH_HIGHLIGHT_STYLES[command]=fg=12
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=11,underline
 ZSH_HIGHLIGHT_STYLES[alias]=fg=5,underline
 ZSH_HIGHLIGHT_STYLES[arg]=fg=7
