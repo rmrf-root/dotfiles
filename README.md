@@ -6,9 +6,9 @@ wallust ungoogled-chromium-bin
 
 # Config
 ## Auto Login
-sudo systemctl edit getty@tty1
-sudo systemctl daemon-reexec
-sudo systemctl restart getty@tty1
+sudo systemctl edit getty@tty1  
+sudo systemctl daemon-reexec  
+sudo systemctl restart getty@tty1  
 ### Put this inside
 [Service]  
 ExecStart=  
