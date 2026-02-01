@@ -11,3 +11,10 @@ sudo systemctl edit getty@tty1
 [Service]
 ExecStart=
 ExecStart=-/sbin/agetty --autologin user --noclear %I $TERM
+## OpenSSH Config
+ssh-keygen -t ed25519 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+### Copy Key
+cat ~/.ssh/id_ed25519.pub
+### Add to github
