@@ -19,6 +19,6 @@ cat ~/.ssh/id_ed25519.pub
 
 # Packages
 ## Official
-zsh zsh-autosuggestions zsh-syntax-highlighting wiremix waybar ttf-jetbrains-mono swww stow slurp rofi openshh nnn nerd-fonts neovim impala grim git fastfetch btop bluetui
+zsh zsh-autosuggestions zsh-syntax-highlighting wiremix waybar ttf-jetbrains-mono swww stow slurp rofi openssh nnn nerd-fonts neovim impala grim git fastfetch btop bluetui
 ## AUR
 wallust ungoogled-chromium-bin
