@@ -9,6 +9,14 @@ sudo systemctl restart getty@tty1
 [Service]  
 ExecStart=  
 ExecStart=-/sbin/agetty --autologin user --noclear %I $TERM  
+## OpenSSH setup
+ssh-keygen -t ed25519 -C "email"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+## Git setup
+ssh -T git@github.com
+git remote set-url origin git@github.com:username/repo.git
 
 # Packages
 ## Official

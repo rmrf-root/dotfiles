@@ -40,11 +40,6 @@ ZSH_HIGHLIGHT_STYLES[alias]=fg=5,underline
 ZSH_HIGHLIGHT_STYLES[arg]=fg=7
 ZSH_HIGHLIGHT_STYLES[invalid]=fg=2,bold
 
-zinit ice wait lucid
 zinit light zsh-users/zsh-autosuggestions
-
-zinit ice wait lucid
 zinit light marlonrichert/zsh-autocomplete
-
-zinit ice wait lucid
 zinit light zsh-users/zsh-syntax-highlighting
