@@ -1,3 +1,4 @@
+alias setup='dotfiles/userscripts/userscripts/setup.sh'
 alias zshconf='nvim .zshrc'
 alias hyprconf='nvim .config/hypr/hyprland.conf'
 alias set-wallpaper='userscripts/set-wallpaper.sh'

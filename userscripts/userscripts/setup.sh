@@ -14,12 +14,6 @@ ask() {
     done
 }
 
-# --- Pacman include ---
-if ask "Pacman config?"; then
-    sudo sed -i '/^Include = \/etc\/pacman.d\/local.conf$/d' /etc/pacman.conf
-    sudo sed -i '/^\[options\]/a Include = /etc/pacman.d/local.conf' /etc/pacman.conf
-fi
-
 # --- Install base packages ---
 if ask "Install base packages (git, base-devel)?"; then
     sudo pacman -S --needed --noconfirm git base-devel
@@ -46,6 +40,12 @@ fi
 # --- Install AUR packages ---
 if ask "Install AUR packages?"; then
     yay -S --needed --noconfirm wallust ungoogled-chromium-bin
+fi
+
+# --- Pacman include ---
+if ask "Install Pacman config?"; then
+    sudo sed -i '/^Include = \/etc\/pacman.d\/local.conf$/d' /etc/pacman.conf
+    sudo sed -i '/^\[options\]/a Include = /etc/pacman.d/local.conf' /etc/pacman.conf
 fi
 
 # --- Stow dotfiles ---
