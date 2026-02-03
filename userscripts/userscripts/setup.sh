@@ -48,6 +48,15 @@ if ask "Install Pacman config?"; then
     sudo sed -i '/^\[options\]/a Include = /etc/pacman.d/local.conf' /etc/pacman.conf
 fi
 
+# --- System dark color scheme (Chromium-compatible) ---
+if ask "Set system color scheme to dark (Chromium, GTK, portals)?"; then
+    mkdir -p "$HOME/.config/gtk-3.0"
+    cat > "$HOME/.config/gtk-3.0/settings.ini" <<EOF
+[Settings]
+gtk-application-prefer-dark-theme=1
+EOF
+fi
+
 # --- Stow dotfiles ---
 if ask "Stow dotfiles?"; then
     read -rp "Enter path to dotfiles directory (default: $HOME/dotfiles): " DOTFILES_DIR
