@@ -20,17 +20,6 @@ if ask "Pacman config?"; then
     sudo sed -i '/^\[options\]/a Include = /etc/pacman.d/local.conf' /etc/pacman.conf
 fi
 
-# --- Stow dotfiles ---
-if ask "Stow dotfiles?"; then
-    read -rp "Enter path to dotfiles directory (default: $HOME/dotfiles): " DOTFILES_DIR
-    DOTFILES_DIR=${DOTFILES_DIR:-$HOME/dotfiles}
-    cd "$DOTFILES_DIR"
-    stow config shell userscripts wallpapers
-    if ask "Stow pacman configs to /? (requires sudo)"; then
-        sudo stow -t / pacman
-    fi
-fi
-
 # --- Install base packages ---
 if ask "Install base packages (git, base-devel)?"; then
     sudo pacman -S --needed --noconfirm git base-devel
@@ -57,6 +46,17 @@ fi
 # --- Install AUR packages ---
 if ask "Install AUR packages?"; then
     yay -S --needed --noconfirm wallust ungoogled-chromium-bin
+fi
+
+# --- Stow dotfiles ---
+if ask "Stow dotfiles?"; then
+    read -rp "Enter path to dotfiles directory (default: $HOME/dotfiles): " DOTFILES_DIR
+    DOTFILES_DIR=${DOTFILES_DIR:-$HOME/dotfiles}
+    cd "$DOTFILES_DIR"
+    stow config shell userscripts wallpapers
+    if ask "Stow pacman configs to /? (requires sudo)"; then
+        sudo stow -t / pacman
+    fi
 fi
 
 # --- OpenSSH setup ---
