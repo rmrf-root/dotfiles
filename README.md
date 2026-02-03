@@ -17,9 +17,17 @@ cat ~/.ssh/id_ed25519.pub
 ## Git setup
 ssh -T git@github.com
 git remote set-url origin git@github.com:username/repo.git
+## Pacman setup
+sudo nvim /etc/pacman.conf 
+### Add
+Include = /etc/pacman.d/local.conf
 
 # Packages
 ## Official
 zsh zsh-autosuggestions zsh-syntax-highlighting wiremix waybar ttf-jetbrains-mono swww stow slurp rofi openssh nnn nerd-fonts neovim impala grim git fastfetch btop brightnessctl bluetui
 ## AUR
 wallust ungoogled-chromium-bin
+
+# Finish
+sudo stow config shell userscripts wallpapers
+sudo stow -t / pacman
