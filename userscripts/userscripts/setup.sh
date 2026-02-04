@@ -62,6 +62,10 @@ if ask "Stow dotfiles?"; then
     read -rp "Enter path to dotfiles directory (default: $HOME/dotfiles): " DOTFILES_DIR
     DOTFILES_DIR=${DOTFILES_DIR:-$HOME/dotfiles}
     cd "$DOTFILES_DIR"
+    if [ -d ~/.config/ ]; then
+	    mv ~/.config ~/.config.bak
+	    echo "moved existing .config to .config.bak"
+    fi
     stow config shell userscripts wallpapers
     if ask "Stow pacman configs to /? (requires sudo)"; then
         sudo stow -t / pacman
