@@ -93,6 +93,7 @@ if ask "Update Git remote to SSH?"; then
     read -rp "Enter GitHub username: " GIT_USER
     read -rp "Enter repository name: " GIT_REPO
     ssh -T git@github.com || true
+    cd ${GIT_REPO}
     git remote set-url origin git@github.com:${GIT_USER}/${GIT_REPO}.git || true
 fi
 
