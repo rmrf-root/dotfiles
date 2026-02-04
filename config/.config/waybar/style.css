@@ -1,7 +1,7 @@
 @import "wallust/colors-waybar.css";
 
 * {
-  color: @color13;
+  color: @color6;
   font-family: 'JetBrainsMono';
   font-size: 12px;
 }
